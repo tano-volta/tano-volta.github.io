@@ -5,18 +5,291 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
     <style>
-      body,h1,h2,h3,h4,h5,h6 {font-family: "Helvetica";color: red;}
-    </style> 
-    l
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+      body, html {
+        height: 100%;
+        color: #777;
+        line-height: 1.8;
+      }
+      
+      /* Create a Parallax Effect */
+      .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      /* First image (Logo. Full height) */
+      .bgimg-1 {
+        background-image: url('images/galata_kulesi_parallax1.jpg');
+        min-height: 100%;
+      }
+      
+      /* Second image (Portfolio) */
+      .bgimg-2 {
+        background-image: url("images/galata_kulesi_parallax2.jpg");
+        min-height: 400px;
+      }
+      
+      /* Third image (Contact) */
+      .bgimg-3 {
+        background-image: url("images/galata_kulesi_parallax3.jpg");
+        min-height: 400px;
+      }
+     
+      
+      /* fourth image (Contact) */
+      .bgimg-4 {
+        background-image: url("images/galata_kulesi_parallax4.jpg");
+        min-height: 400px;
+      }
+
+
+      .wide {letter-spacing: 10px;}
+      .hover-opacity {cursor: pointer;}
+      
+      /* Turn off parallax scrolling for tablets and phones */
+      @media only screen and (max-device-width: 1600px) {
+        .bgimg-1, .bgimg-2, .bgimg-3 .bgimg-4 {
+          background-attachment: scroll;
+          min-height: 400px;
+        }
+      }
+      </style> 
   </head>
 
   <body>
 
-    <!-- navbar -->
+    <!-- myNavbar -->
+    <div class="top">
+      <div class="bar" id="myNavbar">
+        <a class="bar-item button hover-black hide-medium hide-large right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle navDemo Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="bar-item button">HOME</a>
+        <a href="#about" class="bar-item button"><i class="fa fa-th"></i> ABOUT US </a> 
+        <a href="#events" class="bar-item button"><i class="fa fa-th"></i> EVENTS </a> 
+        <a href="#board" class="bar-item button"><i class="fa fa-th"></i> BOARD </a> 
+        <a href="#contact" class="bar-item button"><i class="fa fa-th"></i> CONTACT </a> 
+        <a href="#gallery" class="bar-item button"><i class="fa fa-th"></i> GALLERY </a> 
+        <!--
+        <a href="#" class="bar-item button hide-small right hover-red">
+          <i class="fa fa-search"></i>
+        </a>
+        -->
+      </div>
     
-    <!-- title -->
-    <h1>great</h1>
+      <!-- mobile navDemo bar -->
+      <div id="navDemo" class="bar-block white hide hide-large hide-medium">
+        <a href="#about" class="bar-item button" onclick="toggleFunction()">ABOUT</a>
+        <a href="#events" class="bar-item button" onclick="toggleFunction()">EVENTS</a>
+        <a href="#board" class="bar-item button" onclick="toggleFunction()">BOARD</a>
+        <a href="#contact" class="bar-item button" onclick="toggleFunction()">CONTACT</a>
+        <a href="#gallery" class="bar-item button" onclick="toggleFunction()">GALLERY</a>
+        <a href="#" class="bar-item button">SEARCH</a>
+      </div>
+    </div>
+
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 display-container opacity-min" id="home">
+      <div class="display-middle" style="white-space:nowrap;">
+        <span class="center padding-large black xlarge wide animate-opacity">TASZ</span>
+      </div>
+    </div> 
+
+
+    <!-- about section -->
+    <div class="content container padding-64" id="about">
+      <h3 class="center">About TASZ</h3>
+      <p class="large justify">The turkish students association's goal is to hold events to celebrate the rich turkish culture
+      and to connect students of all backgrounds. Get to know new people, learn more about turkish culture, 
+      it's history and it's peoples' values and join discussions.
+      Furthermore, TASZ aims to highlight people of interest such as artists, historians, professors and the like,
+      inviting them as speakers to Zurich and introducing them to interested students for networking.<br>
+      Another goal TASZ holds is to be a landing point for Turkish students who moved to Zurich alone and might benefit
+      from guidance to student life in Zurich.
+      With the aid of TASZ a warm and entertaining environment might be created, where students can make new
+      experiences together, enjoy Turkish culture and make new friends.
+      </p>
+    </div>
+    
+    <!-- Second Parallax Image with Portfolio Text -->
+    <div class="bgimg-2 display-container opacity-min">
+      <div class="display-middle">
+        <span class="xxlarge text-white wide">EVENTS</span>
+      </div>
+    </div>
+
+    <!-- events -->
+    <div class="content container padding-64" id="events">
+      <h3 class="center">events</h3>
+
+    </div>
+
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 display-container opacity-min">
+      <div class="display-middle">
+        <span class="xxlarge text-white wide">BOARD</span>
+      </div>
+    </div>
+
+    
+    <!-- board -->
+    <div class="content container padding-64" id="board">
+      <h3 class="center">board</h3>
+      <div class="board-row">
+        <div class="board-col center">
+          <!-- here a te-->
+          <img src="images/no-avatar.png" alt="board member" style="width:100%">
+        </div>
+        <div class="board-col center">
+          <!-- here a te-->
+          <img src="images/no-avatar.png" alt="board member" style="width:100%">
+        </div>
+        <div class="board-col center">
+          <!-- here a te-->
+          <img src="images/no-avatar.png" alt="board member" style="width:100%">
+        </div>
+        <div class="board-col center">
+          <!-- here a te-->
+          <img src="images/no-avatar.png" alt="board member" style="width:100%">
+        </div>
+      </div>
+      <div class="board-row">
+        <div class="board-col center">
+          <!-- here a te-->
+          <img src="images/no-avatar.png" alt="board member" style="width:100%">
+        </div>
+        <div class="board-col center">
+          <!-- here a te-->
+          <img src="images/no-avatar.png" alt="board member" style="width:100%">
+        </div>
+        <div class="board-col center">
+          <!-- here a te-->
+          <img src="images/no-avatar.png" alt="board member" style="width:100%">
+        </div>
+        <div class="board-col center">
+          <!-- here a te-->
+          <img src="images/no-avatar.png" alt="board member" style="width:100%">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-4 display-container opacity-min">
+      <div class="display-middle">
+        <span class="xxlarge text-white wide">contact</span>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div class="content container padding-64" id="contact">
+      <h3 class="center">contact</h3>
+
+    </div>
+
+    <!-- gallery -->
+    <div class="content container padding-64" id="gallery">
+      <h3 class="center">Recent Photos</h3>
+      <p class="center large"><em>Here you will be able to find photos of the most recent events.<br> Click on the images to make them bigger</em></p><br>
+
+        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <div class="row-padding center">
+          <div class="col m3">
+            <img src="images/galata_kulesi_parallax1.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="The mist over the mountains">
+          </div>
+
+          <div class="col m3">
+            <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="Coffee beans">
+          </div>
+
+          <div class="col m3">
+            <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="Bear closeup">
+          </div>
+
+          <div class="col m3">
+            <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="Quiet ocean">
+          </div>
+        </div>
+
+        <div class="row-padding center section">
+          <div class="col m3">
+            <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="The mist">
+          </div>
+
+          <div class="col m3">
+            <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="My beloved typewriter">
+          </div>
+
+          <div class="col m3">
+            <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="Empty ghost train">
+          </div>
+
+          <div class="col m3">
+            <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="hover-opacity" alt="Sailing">
+          </div>
+          <button class="button padding-large light-grey" style="margin-top:64px">LOAD MORE</button>
+        </div>
+          </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="modal black" onclick="this.style.display='none'">
+      <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+      <div class="modal-content animate-zoom center transparent padding-64">
+        <img id="img01" class="image">
+        <p id="caption" class="opacity large"></p>
+      </div>
+    </div>
+
+
+
+
+    <!-- footer -->
+    <footer class="center black padding-64 opacity hover-opacity-off">
+      <a href="#home" class="button light-grey"><i class="fa fa-arrow-up margin-right"></i>To the top</a>
+      <div class="xlarge section">
+        <i class="fa fa-facebook hover-opacity"></i>
+        <i class="fa fa-instagram hover-opacity"></i>
+      </div>
+    </footer>
+
+
+    <script>
+      // modal image gallery
+      function onclick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+    //change style of myNavbar on scroll
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+      var myNavbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        myNavbar.className = "bar" + " card" + " animate-top" + " white";
+      } else {
+          myNavbar.className = myNavbar.className.replace(" card animate-top white", "");
+      }
+    }
+
+
+    //toggle menu on small screens
+    function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("show") == -1) {
+        x.className += "show";
+      } else {
+          x.className = x.className.replace("show", "");
+      }
+    }
+    </script>
   </body>
+
 </html>
